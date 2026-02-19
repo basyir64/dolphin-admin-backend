@@ -24,7 +24,7 @@ public class OrderController {
 
     /*
      * If we get a very deep nested object of the "orders" field array,
-     * it's because because of bidirectional relationships in JPA entities.
+     * it's because of bidirectional relationships in JPA entities.
      * Specifically, the Order entity references Customer, and Customer likely
      * references Order again, leading to a circular reference when serializing the
      * response.

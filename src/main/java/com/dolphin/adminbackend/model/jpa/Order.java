@@ -59,7 +59,7 @@ public class Order extends Simulation {
     // @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     // private List<Payment> payments;
 
-    @Column(length = 36, unique = true, nullable = false)
+    @Column(length = 36, nullable = false)
     private String simID;
 
     public UUID getSimID() {

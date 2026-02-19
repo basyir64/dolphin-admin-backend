@@ -51,6 +51,7 @@ public class SocketIOConfig {
         log.info("Socket Port: " + socketPort);
     }
 
+    // Reminder: the URL is http://localhost:8081 (without /socket.io)
     @Bean
     public SocketIOServer socketIOServer() {
         log.info("Attempting socket conn");
@@ -113,7 +114,7 @@ public class SocketIOConfig {
             }
         });
 
-        server.addDisconnectListener(client -> log.info("Client disconnected: {}", client.getSessionId()));
+//        server.addDisconnectListener(client -> log.info("Client disconnected: {}", client.getSessionId()));
 
         return server;
 
